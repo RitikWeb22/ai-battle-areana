@@ -1,0 +1,72 @@
+jab ap ai se kuch set of actions sequence mai profrom krwana hota hai tab hum use krte hai langGraph
+
+ismai 2 chize hoti hai
+
+nodes => {llm,action} nodes vo hote hai jaha hum actions ya llm preform krte hai
+edges => edges workflow ka sequence decide krta hai kaha se kaha taak jaige konse nodes se konse nodes tak
+
+
+npm init -y
+npm i -D typescript tsc
+npx tsc --init
+
+import krne pr js format use krna hai
+
+health check api create
+
+tsx server.ts
+
+
+
+/// langchain
+
+models - integration
+
+google models
+mistrals models
+cohere models
+
+
+npm i dotenv
+
+config/config.ts
+theno models ki api ket config ke andar hoga
+inka type sting rahega config
+
+models.service.ts
+
+
+judge hum gemini model ko banaige
+
+
+services/graph.ai.service.ts
+langGraph install
+
+
+type Judgement ={
+    winner:solution_1 | solution_2;
+    solution_1_score:number;
+    solution_2_score:number;
+}
+type AIBATTLEState = {
+    message:typeof MessagesValue;
+    solution_1:string;
+    solution_2:string;
+    judgement:Judgement | null;
+
+}
+
+const state:AIBATTLEState = {
+    message:MessagesValue,
+    solution_1:"",
+    solution_2:"",
+    judgement:{ winner: null, solution_1_score: 0, solution_2_score: 0 }
+}
+
+
+
+prompt injection padna hai
+
+
+
+nodes jo data apas mai share krrahe hote hai tho data ka format kya hoga usse defiend krne mai kaam aatha hai stateSchema

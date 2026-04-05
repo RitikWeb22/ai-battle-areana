@@ -2,6 +2,7 @@ import express from "express";
 import graphRun from "./ai/langgraph.langchain.js";
 import cors from "cors";
 const app = express();
+app.use(express.static("public"));
 app.use(
   cors({
     origin: "http://localhost:5173",
@@ -19,11 +20,9 @@ app.post("/graph", async (req, res) => {
   const problem = req.body?.problem;
 
   if (typeof problem !== "string" || !problem.trim()) {
-    res
-      .status(400)
-      .json({
-        error: "Invalid request body. 'problem' must be a non-empty string.",
-      });
+    res.status(400).json({
+      error: "Invalid request body. 'problem' must be a non-empty string.",
+    });
     return;
   }
 

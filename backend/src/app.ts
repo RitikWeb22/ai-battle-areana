@@ -2,8 +2,13 @@ import express from "express";
 import graphRun from "./ai/langgraph.langchain.js";
 import cors from "cors";
 import path from "path";
+import { fileURLToPath } from "url";
 const app = express();
-app.use(express.static(path.join(__dirname, "../public")));
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const staticPath = path.join(__dirname, "../../public");
+app.use(express.static(staticPath));
 app.use(
   cors({
     origin: "http://localhost:5173",
@@ -12,6 +17,10 @@ app.use(
   }),
 );
 app.use(express.json());
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(staticPath, "index.html"));
+});
 
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "everything is running smoothly" });

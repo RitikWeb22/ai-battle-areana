@@ -1,8 +1,9 @@
 import express from "express";
 import graphRun from "./ai/langgraph.langchain.js";
 import cors from "cors";
+import path from "path";
 const app = express();
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "../public")));
 app.use(
   cors({
     origin: "http://localhost:5173",

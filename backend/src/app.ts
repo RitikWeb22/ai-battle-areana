@@ -46,7 +46,7 @@ app.post("/graph", async (req, res) => {
   }
 });
 
-app.get("(.*)", (req, res) => {
+app.get("/", (req, res) => {
   const indexPath = path.join(staticPath, "index.html");
   if (fs.existsSync(indexPath)) {
     res.sendFile(indexPath);

@@ -1,5 +1,5 @@
 {
-  "name": "langgraph-battle-arena",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,22 +12,22 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.5.0",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   },
   "dependencies": {
     "@langchain/cohere": "^1.0.4",
-    "@langchain/core": "^1.1.38",
-    "@langchain/google": "^0.1.9",
-    "@langchain/langgraph": "^1.2.6",
+    "@langchain/core": "^1.1.39",
+    "@langchain/google": "^0.1.10",
+    "@langchain/langgraph": "^1.2.7",
     "@langchain/mistralai": "^1.0.7",
-    "cors": "^2.8.5",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.2",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.0",
     "express": "^5.2.1",
-    "langchain": "^1.2.39",
+    "langchain": "^1.3.0",
     "zod": "^4.3.6"
   }
 }

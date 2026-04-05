@@ -1,12 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./app.route";
-import { AiProvider } from "./context/ai.context";
+import AiBattleArena from "./AiBattleArena";
 
 const App = () => {
   return (
-    <AiProvider>
-      <RouterProvider router={router} />
-    </AiProvider>
+    <>
+      <AiBattleArena />
+    </>
   );
 };
 export default App;
